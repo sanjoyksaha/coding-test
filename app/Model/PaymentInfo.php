@@ -25,8 +25,8 @@ class PaymentInfo extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function getExpiredAtAttribute()
+    public function getDeactivatedAtAttribute()
     {
-        return Carbon::createFromFormat("Y-m-d", $this->attributes['expired_at'])->format("d-m-Y");
+        return Carbon::createFromFormat("Y-m-d", $this->attributes['deactivated_at'])->format("d-m-Y");
     }
 }

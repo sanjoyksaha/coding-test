@@ -39,7 +39,7 @@
                         </tbody>
                     </table>
                         @if(Auth::user()->status!=1)
-                            <a href="{{ route('payment') }}" class="btn btn-success">Activate</a>
+                            <span class="font-weight-bolder">Currently you are deactivate. Please active your account. Click</span> <a href="{{ route('payment') }}" class="btn btn-success btn-sm">Activate</a>
                         @endif
                 </div>
             </div>

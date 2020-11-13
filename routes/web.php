@@ -20,6 +20,10 @@ Auth::routes();
 Route::group(['middleware' => 'auth'], function (){
     Route::get('/home', 'HomeController@index')->name('home');
 
+    // Route for payment
     Route::get('/payment', 'PaymentController@index')->name('payment');
     Route::post('/payment/create', 'PaymentController@createPayment')->name('payment.create');
+
+    // Route for monthly payment report
+    Route::get('/monthly-payment-report', 'MonthlyPaymentReportController@monthlyPaymentReport')->name('monthlyPaymentReport');
 });
