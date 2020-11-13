@@ -40,7 +40,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <a href="{{ route('monthlyPaymentReport') }}" class="nav-link">Monthly Payment Report</a>
+                        @auth
+                            <a href="{{ route('monthlyPaymentReport') }}" class="nav-link">Monthly Payment Report</a>
+                        @endauth
                     </ul>
 
                     <!-- Right Side Of Navbar -->
