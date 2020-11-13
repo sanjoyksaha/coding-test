@@ -12,8 +12,8 @@ class PaymentInfo extends Model
         'user_id',
         'card_number',
         'cvc',
-        'expiration_month',
-        'expiration_year',
+        'card_expiration_month',
+        'card_expiration_year',
         'amount',
         'deactivated_at',
     ];

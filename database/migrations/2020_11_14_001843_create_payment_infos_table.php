@@ -16,10 +16,10 @@ class CreatePaymentInfosTable extends Migration
         Schema::create('payment_infos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedInteger('user_id');
-            $table->integer('card_number');
+            $table->string('card_number');
             $table->integer('cvc');
-            $table->integer('expiration_month');
-            $table->integer('expiration_year');
+            $table->integer('card_expiration_month');
+            $table->integer('card_expiration_year');
             $table->double('amount');
             $table->date('deactivated_at');
             $table->timestamps();

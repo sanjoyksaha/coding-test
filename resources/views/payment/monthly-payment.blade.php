@@ -51,35 +51,30 @@
                             <div class='form-group row'>
                                 <label class='col-form-label col-md-3'>Name on Card</label>
                                 <div class="col-sm-9">
-                                    <input class='form-control ' size='4' type='text' required>
+                                    <input class='form-control ' size='4' type="text" placeholder="JHON DOE" required>
                                 </div>
                             </div>
 
                             <div class='form-group row'>
                                 <label class='col-form-label col-md-3'>Card Number</label>
                                 <div class="col-sm-9">
-                                    <input autocomplete='off' class='form-control card-number' size='20' type='text' required>
+                                    <input type="text" name="card_number" autocomplete="off" class="form-control card-number" size="20"
+                                            placeholder="4242 4242 4242 4242" required>
                                 </div>
                             </div>
 
                             <div class='form-row row'>
                                 <div class='col-xs-12 col-md-4 form-group cvc required'>
                                     <label class='col-form-label'>CVC</label>
-                                    <input autocomplete='off' class='form-control card-cvc' placeholder='ex. 311' size='4' type='text' required>
+                                    <input  type="text" name="cvc" autocomplete="off" class="form-control card-cvc" placeholder="ex. 311" size="4" required>
                                 </div>
                                 <div class='col-xs-12 col-md-4 form-group expiration required'>
                                     <label class='col-form-label'>Expiration Month</label>
-                                    <input class='form-control card-expiry-month' placeholder='MM' size='2' type='text' required>
+                                    <input type="text" name="card_expiration_month" class="form-control card-expiry-month" placeholder="MM" size="2" required>
                                 </div>
                                 <div class='col-xs-12 col-md-4 form-group expiration required'>
                                     <label class='col-form-label'>Expiration Year</label>
-                                    <input class='form-control card-expiry-year' placeholder='YYYY' size='4' type='text' required>
-                                </div>
-                            </div>
-
-                            <div class='form-row row'>
-                                <div class='col-md-12 error form-group hide'>
-                                    <div class='alert-danger alert'></div>
+                                    <input type="text" name="card_expiration_year" class="form-control card-expiry-year" placeholder="'YYYY" size="4" required>
                                 </div>
                             </div>
 
@@ -100,9 +95,6 @@
 
 @push('script')
     <script type="text/javascript">
-        $(document).ready(function () {
-            $('.hide').hide();
-        });
         $(function() {
             let $form         = $(".require-validation");
             $('form.require-validation').bind('submit', function(e) {
@@ -114,7 +106,6 @@
                     $errorMessage = $form.find('div.error'),
                     valid         = true;
                 $errorMessage.addClass('hide');
-                $('.hide').show();
 
                 $('.has-error').removeClass('has-error');
                 $inputs.each(function(i, el) {
