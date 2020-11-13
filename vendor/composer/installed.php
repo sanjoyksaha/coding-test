@@ -1,12 +1,12 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '9b67769832597e9d3d807960d2c877ed3bb0856b',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -365,12 +365,12 @@
     ),
     'laravel/laravel' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '9b67769832597e9d3d807960d2c877ed3bb0856b',
     ),
     'laravel/tinker' => 
     array (
@@ -757,6 +757,15 @@
       array (
       ),
       'reference' => '99732be0ddb3361e16ad77b68ba41efc8e979019',
+    ),
+    'stripe/stripe-php' => 
+    array (
+      'pretty_version' => 'v7.62.0',
+      'version' => '7.62.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '9c2fc846d5b2719945e825228474f15314c0fed6',
     ),
     'swiftmailer/swiftmailer' => 
     array (

@@ -4,6 +4,15 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            @if(session('success'))
+                <div class="alert alert-success">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <span>{{ session('success') }}</span>
+                </div>
+            @endif
+
             <div class="card">
                 <div class="card-header">Dashboard</div>
 
@@ -30,7 +39,7 @@
                         </tbody>
                     </table>
                         @if(Auth::user()->status!=1)
-                            <button class="btn btn-success">Activate</button>
+                            <a href="{{ route('payment') }}" class="btn btn-success">Activate</a>
                         @endif
                 </div>
             </div>
